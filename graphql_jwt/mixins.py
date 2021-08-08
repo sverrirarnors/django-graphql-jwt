@@ -90,7 +90,6 @@ class KeepAliveRefreshMixin:
         token = jwt_settings.JWT_ENCODE_HANDLER(payload, context)
         signals.token_refreshed.send(sender=cls, request=context, user=user)
 
-        print(user)
         result = cls(payload=payload, refresh_expires_in=refresh_expires_in, user=user)
         return maybe_thenable((result, token), on_resolve)
 
