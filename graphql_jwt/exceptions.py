@@ -12,7 +12,7 @@ class JSONWebTokenError(Exception):
 
 
 class PermissionDenied(JSONWebTokenError):
-    default_message = _('You do not have permission to perform this action')
+    default_message = _('Þú hefur ekki leyfi til að framkvæma þessa aðgerð')
 
 
 class JSONWebTokenExpired(JSONWebTokenError):
