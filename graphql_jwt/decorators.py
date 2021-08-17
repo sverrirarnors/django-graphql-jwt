@@ -99,7 +99,7 @@ def token_auth(f):
         )
         if user is None:
             raise exceptions.JSONWebTokenError(
-                _('Notendanafn eða lykilorð rangt'),
+                _('Netfang eða lykilorð rangt'),
             )
 
         if hasattr(context, 'user'):
